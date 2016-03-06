@@ -70,6 +70,11 @@ loginPage <- "
 		color: #fff;
 	}
 
+	.login-block .incorrect-credentials {
+		margin: 0px 0px 20px 0px;
+		text-align: center;
+	}
+
 	/* latin */
 	@font-face {
 		font-family: 'Montserrat';

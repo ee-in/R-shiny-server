@@ -1,16 +1,20 @@
 #this is where we load all the CSS from
 source("./css/main-css.R")
 
+#here is where we load all of our ui components (pages)
+source("./ui/login-page.R")
+
+#R packages to install
+remove( list = ls() )
+library("digest")
+library("dplyr")
+library("shiny")
+library("shinyjs")
+
 shinyUI(
 	fluidPage(
 		useShinyjs(),
 		inlineCSS(cssInstructions),
-		div(
-			class = "login-block",
-			h1("Login Page"),
-			textInput(inputId = "username", label = "Username", value = ""),
-			textInput(inputId = "password", label = "Password", value = ""),
-			actionButton(inputId = "submit_button_login", label = "SUBMIT")
-		)
+		loginPage
 	)
 )
